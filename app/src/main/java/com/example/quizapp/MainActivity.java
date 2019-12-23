@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trueButton= findViewById(R.id.true_button);
         questionText=findViewById(R.id.answer_text_view);
 
-        falseButton.setOnClickListener(this);
+        falseButton.setOnClickListener(this); //using the interface View.onClickListener Ctrl+B
         trueButton.setOnClickListener(this);
 
 
@@ -34,8 +34,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.false_button:
+                //context another way of setting context(Mainactivity.this, and getApplicationContext())
                 Toast.makeText(MainActivity.this, "False",
-                        Toast.LENGTH_SHORT);
+                        Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.true_button:
+                Toast.makeText(MainActivity.this,
+                        "True", Toast.LENGTH_SHORT).show();
+                break;
+
+
 
 
         }
