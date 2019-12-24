@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int currentIndex = 0;
 
     private Question[] questionBank = new Question[]{
+            new Question(R.string.linear_question,true),
             new Question(R.string.perpendicular_question, false),
             new Question(R.string.product_question, false),
             new Question(R.string.slope_question, true),
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 isAnswerCorrect(false);
                 break;
             case R.id.true_button:
-                
+
                 isAnswerCorrect(true);
                 break;
 
