@@ -8,5 +8,5 @@
     <string name="perpendicular_question">Two lines with positive slopes can be perpendicular</string>
     <string name="product_question">The product of two positive numbers is NOT positive</string>
     <string name="test_question">Is this a linear equation? y=2x+4</string>
-
+    <string name="next_text">Next</string>
 </resources>
