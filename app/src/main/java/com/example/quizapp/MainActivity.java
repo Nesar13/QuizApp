@@ -56,10 +56,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //on to the next question
 
                 currentIndex=(currentIndex+1)%questionBank.length;
-                Log.d("Current", "onClick: "+currentIndex);
-                questionText.setText(questionBank[currentIndex].getAnswerResID());
+                nextButtonUpdate();
 
         }
 
+    }
+    public void nextButtonUpdate(){
+        Log.d("Current", "onClick: "+currentIndex);
+        questionText.setText(questionBank[currentIndex].getAnswerResID());
     }
 }
