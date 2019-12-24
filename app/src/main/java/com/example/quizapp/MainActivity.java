@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void isAnswerCorrect(boolean answer) {
         boolean temp = questionBank[currentIndex].isAnswerTrue();
-        int toastID = 0;
+        int toastID;
 
         if (answer == temp) {
             toastID = R.string.correct_answer;
