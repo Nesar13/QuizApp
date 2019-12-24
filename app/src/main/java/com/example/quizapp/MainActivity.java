@@ -13,7 +13,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  Button falseButton;
     private TextView questionText;
 
-
+    private Question[] questionBank=new Question[] {
+            new Question(R.string.perpendicular_question, false),
+            new Question(R.string.product_question, false),
+            new Question(R.string.slope_question, true),
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

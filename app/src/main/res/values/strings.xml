@@ -2,6 +2,8 @@
     <string name="app_name">Quiz App</string>
     <string name="true_button">True</string>
     <string name="false_button">False</string>
+    <string name="correct_answer">That\'s correct</string>
+    <string name="incorrect_answer">That\'s incorrect</string>
     <string name="slope_question">The slope of a vertical line is undefined.</string>
     <string name="perpendicular_question">Two lines with positive slopes can be perpendicular</string>
     <string name="product_question">The product of two positive numbers is NOT positive</string>
