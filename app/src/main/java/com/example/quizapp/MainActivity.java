@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button backButton;
     private int currentIndex = 0;
 
+
     private Question[] questionBank = new Question[]{
             new Question(R.string.linear_question,true),
             new Question(R.string.perpendicular_question, false),
@@ -61,14 +62,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.next_button:
                 //on to the next question
-
-                currentIndex = (currentIndex + 1) % questionBank.length;
                 nextButtonUpdate();
                 break;
 
             case R.id.back_button:
-
-                currentIndex=(currentIndex+(questionBank.length-1)) % questionBank.length;
                 backButtonUpdate();
                 break;
 
@@ -78,10 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void nextButtonUpdate() {
+        currentIndex = (currentIndex + 1) % questionBank.length;
         Log.d("Current", "onClick: " + currentIndex);
         questionText.setText(questionBank[currentIndex].getAnswerResID());
     }
     public void backButtonUpdate(){
+        currentIndex=(currentIndex+(questionBank.length-1)) % questionBank.length;
         Log.d("Current", "onClick: " + currentIndex);
         questionText.setText(questionBank[currentIndex].getAnswerResID());
 
@@ -93,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (answer == temp) {
             toastID = R.string.correct_answer;
+
         } else {
             toastID = R.string.incorrect_answer;
         }
