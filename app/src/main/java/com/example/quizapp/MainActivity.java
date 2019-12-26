@@ -64,12 +64,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 currentIndex = (currentIndex + 1) % questionBank.length;
                 nextButtonUpdate();
+                break;
 
             case R.id.back_button:
 
-                currentIndex=(currentIndex-1) % questionBank.length;
+                currentIndex=(currentIndex+(questionBank.length-1)) % questionBank.length;
                 backButtonUpdate();
-
+                break;
 
 
         }
