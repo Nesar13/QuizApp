@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.back_button:
+                //go back to previous question
                 backButtonUpdate();
                 break;
 
