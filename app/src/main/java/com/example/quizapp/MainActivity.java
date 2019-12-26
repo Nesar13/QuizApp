@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button falseButton;
     private TextView questionText;
     private Button nextButton;
+    private Button backButton;
     private int currentIndex = 0;
 
     private Question[] questionBank = new Question[]{
@@ -31,11 +32,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trueButton = findViewById(R.id.true_button);
         questionText = findViewById(R.id.answer_text_view);
         nextButton = findViewById(R.id.next_button);
+        backButton =findViewById(R.id.back_button);
+
 
 
         falseButton.setOnClickListener(this); //using the interface View.onClickListener Ctrl+B
         trueButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
+        backButton.setOnClickListener((this));
 
 
     }
@@ -61,6 +65,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 currentIndex = (currentIndex + 1) % questionBank.length;
                 nextButtonUpdate();
 
+            case R.id.back_button:
+
+                currentIndex=(currentIndex-1) % questionBank.length;
+                backButtonUpdate();
+
+
+
         }
 
     }
@@ -68,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void nextButtonUpdate() {
         Log.d("Current", "onClick: " + currentIndex);
         questionText.setText(questionBank[currentIndex].getAnswerResID());
+    }
+    public void backButtonUpdate(){
+        Log.d("Current", "onClick: " + currentIndex);
+        questionText.setText(questionBank[currentIndex].getAnswerResID());
+
     }
 
     public void isAnswerCorrect(boolean answer) {
