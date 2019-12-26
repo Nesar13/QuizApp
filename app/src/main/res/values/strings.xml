@@ -8,6 +8,7 @@
     <string name="perpendicular_question">Two lines with positive slopes can be perpendicular</string>
     <string name="product_question">The product of two positive numbers is NOT positive</string>
     <string name="linear_question">Is this a linear equation? y=2x+4</string>
+    <string name="quadratic_question">You can use the quadratic formula to solve third degree polynomials.</string>
     <string name="next_text">Next</string>
     <string name="back_text">Back</string>
     <string name="q_description">Q image</string>
