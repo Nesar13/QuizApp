@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             new Question(R.string.product_question, false),
             new Question(R.string.slope_question, true),
             new Question(R.string.quadratic_question,false),
+
     };
 
     @Override
