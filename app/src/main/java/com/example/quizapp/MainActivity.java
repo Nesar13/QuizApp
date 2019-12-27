@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,8 +14,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button trueButton;
     private Button falseButton;
     private TextView questionText;
-    private Button nextButton;
-    private Button backButton;
+    private ImageButton nextButton;
+    private ImageButton backButton;
     private int currentIndex = 0;
 
 
