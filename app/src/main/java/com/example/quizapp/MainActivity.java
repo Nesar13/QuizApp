@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private Question[] questionBank = new Question[]{
-            new Question(R.string.linear_question,true),
+            new Question(R.string.linear_question, true),
             new Question(R.string.perpendicular_question, false),
             new Question(R.string.product_question, false),
             new Question(R.string.slope_question, true),
-            new Question(R.string.quadratic_question,false),
+            new Question(R.string.quadratic_question, false),
 
     };
 
@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         trueButton = findViewById(R.id.true_button);
         questionText = findViewById(R.id.answer_text_view);
         nextButton = findViewById(R.id.next_button);
-        backButton =findViewById(R.id.back_button);
-
+        backButton = findViewById(R.id.back_button);
 
 
         falseButton.setOnClickListener(this); //using the interface View.onClickListener Ctrl+B
@@ -79,14 +78,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void nextButtonUpdate() {
-        currentIndex = (currentIndex + 1) % questionBank.length;
-        Log.d("Current", "onClick: " + currentIndex);
-        questionText.setText(questionBank[currentIndex].getAnswerResID());
+        if (currentIndex < questionBank.length) {
+
+            currentIndex = (currentIndex + 1) % questionBank.length;
+            Log.d("Current", "onClick: " + currentIndex);
+            questionText.setText(questionBank[currentIndex].getAnswerResID());
+        }
     }
-    public void backButtonUpdate(){
-        currentIndex=(currentIndex+(questionBank.length-1)) % questionBank.length;
-        Log.d("Current", "onClick: " + currentIndex);
-        questionText.setText(questionBank[currentIndex].getAnswerResID());
+
+    public void backButtonUpdate() {
+        if (currentIndex > 0) {
+            
+            currentIndex = (currentIndex + -1) % questionBank.length;
+            Log.d("Current", "onClick: " + currentIndex);
+            questionText.setText(questionBank[currentIndex].getAnswerResID());
+        }
 
     }
 
