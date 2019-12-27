@@ -11,5 +11,5 @@
     <string name="quadratic_question">You can use the quadratic formula to solve third degree polynomials.</string>
     <string name="next_text">Next</string>
     <string name="back_text">Back</string>
-    <string name="q_description">Q image</string>
+    <string name="q_description">Android image</string>
 </resources>

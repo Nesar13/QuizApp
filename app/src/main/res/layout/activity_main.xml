@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="72dp"
         android:layout_height="114dp"
-        android:src="@drawable/qletter"
+        android:src="@drawable/ic_launcher_foreground"
         android:contentDescription="@string/q_description" />
 
     <TextView
