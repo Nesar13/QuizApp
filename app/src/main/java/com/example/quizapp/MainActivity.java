@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void nextButtonUpdate() {
-        if (currentIndex < questionBank.length) {
+        if (currentIndex < questionBank.length-1) {
 
             currentIndex = (currentIndex + 1) % questionBank.length;
             Log.d("Current", "onClick: " + currentIndex);
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void backButtonUpdate() {
         if (currentIndex > 0) {
-            
+
             currentIndex = (currentIndex + -1) % questionBank.length;
             Log.d("Current", "onClick: " + currentIndex);
             questionText.setText(questionBank[currentIndex].getAnswerResID());
