@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton backButton;
     private int currentIndex = 0;
 
-
     private Question[] questionBank = new Question[]{
             new Question(R.string.linear_question, true),
             new Question(R.string.perpendicular_question, false),
@@ -108,5 +107,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         Toast.makeText(MainActivity.this, toastID, Toast.LENGTH_SHORT).show();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+//    @Override
+//    protected void onPostResume() {
+//        super.onPostResume();
+//    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }
