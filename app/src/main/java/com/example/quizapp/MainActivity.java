@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
     }
 
-//    @Override
-//    protected void onPostResume() {
-//        super.onPostResume();
-//    }
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
 
     @Override
     protected void onResume() {
@@ -139,5 +139,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onDestroy();
     }
 
-    
+
 }
